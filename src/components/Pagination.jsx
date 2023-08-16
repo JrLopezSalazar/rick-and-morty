@@ -1,9 +1,9 @@
 const Pagination = ({ pages, setCurrentPage, currentPage }) => {
   return (
-    <ul className="bg-yellow-500 flex items-center justify-center gap-3 h-14 active:bg-blue-600 cursor-pointer"  >
+    <ul className="bg-slate-500/30 flex items-center justify-center gap-3 h-14 active:bg-green-600 cursor-pointer"  >
       {pages.map((page) => (
         <li 
-          className={`${currentPage === page && "text-red-500"}`}
+          className={`${currentPage === page && "text-green-500"}`}
           onClick={() => setCurrentPage(page)}
           key={page}
         >
