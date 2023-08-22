@@ -6,6 +6,7 @@ import axios from "axios";
 import ResidentList from "./components/ResidentList";
 import LocationForm from "./components/LocationForm";
 import ResidentCard from "./components/ResidentCard";
+import Slider from "./components/Slider"
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState(null);
@@ -48,8 +49,9 @@ function App() {
       
     </div> */}
 
-      <div className="">
-        <div className="bg-[]">
+      <div className=" ">
+
+          <Slider/>
           <LocationForm handleSubmit={handleSubmit} />
           <LocationInfo currentLocation={currentLocation} />
 
@@ -57,8 +59,8 @@ function App() {
             residents={currentLocation?.residents ?? []}
             currentLocation={currentLocation}
           />
-        </div>
       </div>
+      
     </>
   );
 }

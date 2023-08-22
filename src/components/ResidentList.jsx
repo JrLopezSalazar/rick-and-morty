@@ -30,17 +30,20 @@ const ResidentList = ({ residents, currentLocation }) => {
   }, [currentLocation]);
 
   return (
-    <article className="">
-      <section className="pt-10 grid gap-8 justify-center grid-cols-[repeat(auto-fit,_460px)] max-w-[1200px] mx-auto">
+    <article className="justify-center mx-auto md:max-w-[1090px] mt-9 ">
+      <section className="flex max-w-[1080]  flex-wrap justify-center gap-[70px] mx-5  ">
         {residentsInPage.map((resident) => (
           <ResidentCard key={resident} residentUrl={resident} />
         ))}
       </section>
-      <Pagination
+
+      <div className="flex mt-10 w-full">
+      <Pagination 
         pages={pages}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
+      </div>
     </article>
   );
 };
